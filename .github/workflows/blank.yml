@@ -37,6 +37,7 @@ jobs:
           auto-activate-base: true
           python-version: 3.9
           miniconda-version: "latest"
+          activate-environment: test
 
       - name: Install Rust
         run: |
@@ -46,8 +47,9 @@ jobs:
           export PATH="~/.cargo/bin:${PATH}"
 
       - name: Install Milabench
+        shell: bash -el {0}
         run: |
-          conda activate test
+          conda info
           python --version
           python -m pip install -U pip
 
