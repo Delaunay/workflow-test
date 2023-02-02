@@ -23,7 +23,10 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     environment: mila-deploy
-
+    defaults:
+      run:
+        shell: bash -el {0}
+    
     env:
       MILABENCH_CONFIG: "config/standard-cuda.yaml"
       MILABENCH_BASE: "output"
