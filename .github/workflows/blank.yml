@@ -47,7 +47,6 @@ jobs:
           export PATH="~/.cargo/bin:${PATH}"
 
       - name: Install Milabench
-        shell: bash -el {0}
         run: |
           conda info
           python --version
@@ -55,6 +54,7 @@ jobs:
 
       - name: Install Milabench Env
         run: |
+          conda info
           milabench install $MILABENCH_CONFIG --base $MILABENCH_BASE $MILABENCH_ARGS
 
       - name: Prepare Milabench Env
