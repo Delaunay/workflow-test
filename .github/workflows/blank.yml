@@ -21,6 +21,7 @@ on:
 
 jobs:
   tests:
+    runs-on: ubuntu
     environment: mila-deploy
 
     env:
