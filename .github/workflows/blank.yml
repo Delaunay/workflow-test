@@ -47,7 +47,9 @@ jobs:
 
       - name: Install Milabench
         run: |
-          pip install -e .
+          conda activate test
+          python --version
+          python -m pip install -U pip
 
       - name: Install Milabench Env
         run: |
