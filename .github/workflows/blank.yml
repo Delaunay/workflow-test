@@ -22,7 +22,6 @@ on:
 jobs:
   tests:
     environment: mila-deploy
-    runs-on: [self-hosted, gpu]
 
     env:
       MILABENCH_CONFIG: "config/standard-cuda.yaml"
